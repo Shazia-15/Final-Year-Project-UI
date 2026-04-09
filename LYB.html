@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Business</title>
+
+
+    <style>
+        :root {
+            --dark: #3E362E;
+            --primary: #865D36;
+            --hero: #93785B;
+            --card: #AC8968;
+            --light: #A69080;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: var(--light);
+        }
+
+        /* MAIN SECTION */
+        .business-section {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* LEFT SIDE */
+        .left-box {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* IMAGE */
+        .left-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* TEXT OVER IMAGE */
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 80%;
+        }
+
+        .overlay-content h1 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .overlay-content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* RIGHT SIDE */
+        .right-box {
+            width: 50%;
+            background: rgb(246, 246, 246);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-box h1 {
+            color: var(--dark);
+            margin-bottom: 45px;
+            font-weight: 600;
+        }
+
+        .right-box a{
+            text-decoration: none;
+        }
+
+        /* BUTTONS */
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background: #734b2c;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .business-section {
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            .left-box {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .right-box {
+                width: 100%;
+                height: 50vh;
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .overlay-content h1 {
+                font-size: 28px;
+            }
+
+            .overlay-content p {
+                font-size: 16px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="business-section"> <!-- LEFT SIDE -->
+        <div class="left-box">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk29X4pGbI6yibB6c7lkjE7cu5lavg9iE7Wg&s"
+                alt="">
+            <div class="overlay-content">
+                <h1>Grow Your Venue Business</h1>
+                <p> Join VenueVista and connect with customers looking for the perfect venue for weddings, events and
+                    dining. List your business today and expand your reach. </p>
+            </div>
+        </div> <!-- RIGHT SIDE -->
+        <div class="right-box">
+            <h1>List Your Business</h1>
+            <div class="buttons"> 
+                <a href="sign-up.html" class="btn">Marriage Hall Owner</a> 
+                <a href="sign-up.html" class="btn">Restaurant Owner</a> 
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

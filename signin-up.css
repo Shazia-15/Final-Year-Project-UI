@@ -1,0 +1,75 @@
+:root {
+    --dark: #3E362E;
+    --primary: #865D36;
+    --hero: #93785B;
+    --card: #AC8968;
+    --light: #A69080;
+}
+
+/* Background */
+body {
+    background-image: url(https://i.pinimg.com/1200x/10/ff/0a/10ff0a357657ad6cdf1df47ba97a2410.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card Design */
+.login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Welcome Heading */
+.login-card h2 {
+    color: var(--dark);
+    font-size: 28px;
+}
+
+/* Sign In Title */
+.signin-title {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Sign Up Title  */
+.signup-title{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Custom Label */
+.custom-label {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* Input Styling */
+.custom-input {
+    border: 1px solid var(--light);
+}
+
+.custom-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px var(--primary);
+}
+
+/* Button Styling */
+.custom-btn {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background: #734b2c;
+    color: white;
+}
+
+.anchor{
+    margin-top: 5px;
+}

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenueVista</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar Area -->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+
+            <a class="navbar-brand text-light fw-bold" href="">VenueVista</a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" title="#" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="Navbar">
+
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Venues.html">Venues</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <button class="btn btn-call rounded-pill" onclick="openPopup()">Call Now</button>
+
+                    <!-- Overlay -->
+                    <div class="overlay" id="overlay">
+
+                        <div class="call-popup">
+                            <div class="header">
+                                <span>Call for Consultation</span>
+                                <i class="fa-solid fa-xmark close" onclick="closePopup()"></i>
+                            </div>
+
+                            <div class="number-box">
+                                <!-- Call icon -->
+                                <a href="tel:+923001234567" title="Call">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+
+                                <!-- Number -->
+                                <span id="phone">+92 300 1234567</span>
+
+                                <!-- Copy icon -->
+                                <i class="copyicon fa-regular fa-copy" onclick="copyNumber()" title="Copy"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a href="LYB.html" class="btn btn-main rounded-pill">List your business</a>
+                    <div class="menu-wrapper">
+                        <button class="menu-btn" aria-label="User Menu">
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-regular fa-circle-user"></i>
+                        </button>
+
+                        <div class="menu-dropdown">
+
+                            <!-- Help -->
+                            <a href="ContactUs.html">Help
+                            </a>
+
+                            <!-- Sign In (icon only) -->
+                            <a href="sign-in.html">Sign In
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+
+                            <!-- Sign Up (icon only) -->
+                            <a href="sign-up.html">Sign Up
+                                <i class="fa-solid fa-user-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero text-center">
+        <div class="container hero-Cbox">
+            <h1 class="fw-bold">Find Your Perfect Venue</h1>
+            <p class="mt-3 fs-5">
+                Marriage Halls & Restaurants for Every Occasion
+            </p>
+            <div class="search-box mx-auto col-lg-6 col-md-8 col-12">
+                <input type="text" placeholder=" Search by Name...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Our Services section -->
+
+    <section class="uhero mt-5">
+        <h1 class="text-center pt-4 mb-5">Our Services</h1>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="MHcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Venue Booking</h5>
+                            <img src="https://media.licdn.com/dms/image/v2/D5612AQHdvlVW3HuQFA/article-cover_image-shrink_720_1280/B56Zc7g9JBGoAM-/0/1749050185297?e=1776902400&v=beta&t=mUr53BSfkjJYZfmp_hwiQBxiT2556H76OPCzNf9TkUs"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="MHcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Catering</h5>
+                            <img src="https://images.weddified.com/images/40.7591357573504625shadi%20tayari%20(86).jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="MHcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Decor</h5>
+                            <img src="https://weddingsutra.com/images/wedding-images/entertaining/top-wedding-designers/top-wedding-designers-pic3.jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="MHcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Lighting & Sound</h5>
+                            <img src="https://cdn.christmaslightsetc.com/images/CategoryDetail/151755/globe-patio-bulb-wedding-lights-ceremony.jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="Rcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Home Delivery</h5>
+                            <img src="https://images.unsplash.com/photo-1752070182361-9fa562ed7f97?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="Rcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Online Ordering</h5>
+                            <img src="https://www.blinkco.io/wp-content/uploads/2021/08/food-deliver-yapp-interface-mobile.jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="Rcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Dine-In</h5>
+                            <img src="https://www.esb.id/images/article/1743143773_835e948e909eab255525.jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12 mb-3">
+                    <a href="Rcards.html" class="text-decoration-none text-white">
+                        <div class="custom-card d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Takeaway</h5>
+                            <img src="https://i.pinimg.com/736x/df/69/58/df6958a457bcde447ff6b98648d1f051.jpg"
+                                alt="Venue">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-- Popular Deals Section -->
+
+
+    <!-- <section class="deals py-5">
+        <h2 class="text-center pt-5 pb-5 fs-1">Popular Deals</h2>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12"> Carousel yahan hoga -->
+
+    <!-- <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner"> -->
+
+    <!-- Slide 1 -->
+    <!-- <div class="carousel-item active">
+                                <div class="row g-3">
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?1"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?2"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?3"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?4"
+                                            class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div> -->
+
+    <!-- Slide 2 -->
+    <!-- <div class="carousel-item">
+                                <div class="row g-3">
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?5"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?6"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?7"
+                                            class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-6">
+                                        <img aria-label="deals" src="https://picsum.photos/300/200?8"
+                                            class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> -->
+
+    <!-- Controls -->
+    <!-- <button aria-label="deals" class="carousel-control-prev" type="button"
+                            data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button aria-label="deals" class="carousel-control-next" type="button"
+                            data-bs-target="#serviceCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+
+
+    <!-- Vision , Mission, Success Section  -->
+    <section class="vission">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <img src="images/Vpic.png" alt="">
+                        </div>
+                        <div class="pe-3">
+                            <h2>Our Vission</h2>
+                            <p>Our vision is to become a centralized platform for exploring restaurants and venues
+                                efficiently. We strive to make decision-making easier through accurate information and
+                                reviews.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <img src="images/Mpic.png" alt="">
+                        </div>
+                        <div class="pe-3">
+                            <h2>Our Mission</h2>
+                            <p>Our mission is to provide a secure and easy-to-use platform for users to explore
+                                restaurants and venues. We aim to offer detailed information, ratings, and reviews.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <img src="images/Spic.png" alt="">
+                        </div>
+                        <div class="pe-3">
+                            <h2>Our Success</h2>
+                            <p>Our success lies in user satisfaction and platform reliability. Our success is defined by
+                                how effectively we solve user problems. Growing user engagement reflects platform’s
+                                value.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+
+    <section class="uvission text-center">
+        <div class="container">
+            <div>
+                <h2 class="fs-1">ABOUT <span>US</span></h2>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <p class="text-center">This project is a web-based platform developed to address the growing need for a
+                    centralized system that connects users with restaurants and event venues. It provides complete
+                    details
+                    such as service descriptions, ratings, reviews, and comparisons to support informed decision-making.
+                    The
+                    platform is built with a user-friendly interface and responsive design to ensure accessibility on
+                    all
+                    devices. By focusing on reliability and efficiency, the system benefits users by saving time and
+                    supports businesses by increasing their online presence..</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- How it work section -->
+
+
+    <section class="work">
+        <div class="container">
+
+            <div>
+                <h2>How it works?</h2>
+            </div>
+            <div>
+                <p>We are your venue discoverer. Find venues for your wedding, birthday, social mixer or corporate
+                    event. We provide you the best of the venues for your next event.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 work-box">
+                    <img src="images/browsepic.png" alt="Browse" class="work-img">
+                    <!-- <i class="fa fa-anchor"></i> -->
+                    <h5>Browse</h5>
+                    <p class="text-center">Search and browse a variety of venues. Compare each venue based on location,
+                        amenities it offers,
+                        and other features.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 work-box">
+                    <img src="images/bookavenuepic.png" alt="Booking" class="work-img">
+                    <h5>Book a Venue</h5>
+                    <p class="text-center">Select a date to check availability of shortlisted venue. Reserve it through
+                        'Book a Venue'
+                        button. Contact us for venue visit and payment to confirm the booking. It's that simple!</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-12 work-box">
+                    <img src="images/bravo.png" alt="Smiley" class="work-img">
+                    <h5>Bravo! It's Done</h5>
+                    <p class="text-center">The last step in the process is to relax and enjoy your event. You have saved
+                        yourself from the
+                        hassle and booked the venue perfect for your event. That's why Mehfil is there…</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- faq section -->
+    <section class="faq">
+        <div class="container">
+            <h1 class="text-center mt-5 pt-5">FAQ - YOUR QUESTIONS? WE GOT ANSWERS!</h1>
+
+            <div class="row mt-5 g-4">
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Why should I register on this platform?</h4>
+                        <p>Registering on our platform helps you access trusted wedding services in one place. It allows
+                            you to compare vendors, save time, and make informed decisions.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Does it make sense to search multiple services at once?</h4>
+                        <p>Yes. Searching multiple services together helps you explore more options and compare prices,
+                            locations, and ratings easily.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Can I trust the vendors listed on this platform?</h4>
+                        <p>Yes. We list verified vendors with complete profiles, reviews, and ratings to ensure
+                            transparency.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Is my personal information safe on this website?</h4>
+                        <p>Yes. We prioritize user privacy and data security. Your personal information is protected.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Can I contact vendors directly through the platform?</h4>
+                        <p>Yes. Our platform allows direct communication with vendors for queries and bookings.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Is registration free for users?</h4>
+                        <p>Yes. User registration is completely free with no hidden charges.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Can vendors update their service information?</h4>
+                        <p>Yes. Vendors can update their profiles, pricing, and availability anytime.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="faq-card">
+                        <h4>Will this platform help save time in event planning?</h4>
+                        <p>Absolutely. It combines all services in one place for efficient planning.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Area Design -->
+
+
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="footer row justify-content-center  text-center text-md-start">
+
+                <!-- About section -->
+                <div class="col-md-6 col-12 p-5 pt-0">
+                    <h4>About Us</h4>
+                    <p>We are a centralized online platform that helps users discover the best restaurants and
+                        venues.
+                        Our system allows users to explore, compare, and select services easily. We focus on
+                        transparency, usability, and performance. Our goal is to make decision-making faster and
+                        smarter.</p>
+
+                    <form action="post">
+                        <div class="input-wrapper">
+                            <label for="">Got any suggestion for us?</label><br>
+                            <input class="w-100" type="text" placeholder="Type Here..." id="suggestion">
+
+                            <button type="button" id="submitBtn" disabled>Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-md-2 col-sm-3 col-12 mb-3">
+                    <h4>Company</h4>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-white">Press & Coverage</a></li>
+                        <li><a href="#" class="text-white">Vendors</a></li>
+                        <li><a href="#" class="text-white">Clients Reviews</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-2 col-sm-3 col-12 mb-3">
+                    <h4>Services</h4>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#" class="text-white me-2">Photographers</a></li>
+                        <li><a href="#" class="text-white me-2">Bridal Makeup</a></li>
+                        <li><a href="#" class="text-white">Wedding Venues</a></li>
+                        <li><a href="#" class="text-white">Decorations</a></li>
+                        <li><a href="#" class="text-white">Home Delivery</a></li>
+                        <li><a href="#" class="text-white">Online Ordering</a></li>
+                        <li><a href="#" class="text-white">Catering Services</a></li>
+                        <li><a href="#" class="text-white">Reserve Services</a></li>
+                    </ul>
+
+
+
+                </div>
+
+
+                <div class="col-md-2 col-sm-3 col-12 mb-3">
+                    <h4>Legal</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white me-2">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-white me-2">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-4 text-center">
+                <hr class="border border-1">
+                <p>&copy; VenusVista 2026. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        // Navbar call now button's javscript
+
+        function openPopup() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function copyNumber() {
+            const number = document.getElementById("phone").innerText;
+            navigator.clipboard.writeText(number);
+        }
+
+
+        // In footer submit button's disabled property JavaScript 
+
+        const input = document.getElementById("suggestion");
+        const button = document.getElementById("submitBtn");
+
+        input.addEventListener("input", () => {
+            button.disabled = input.value.trim() === "";
+        });
+    </script>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

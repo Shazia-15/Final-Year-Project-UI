@@ -1,0 +1,221 @@
+:root {
+    --dark: #3E362E;
+    --primary: #865D36;
+    --hero: #93785B;
+    --card: #AC8968;
+    --light: #A69080;
+}
+
+body {
+    background: var(--light);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    filter: blur(0.8px);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+/* Responsive Fix */
+@media (max-width: 992px) {
+    .hero img {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero img {
+        height: 50vh;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero img {
+        height: 40vh;
+    }
+}
+
+/* Information Section */
+/* Contact Section */
+.container {
+    padding: 80px 0;
+    /* Top & Bottom spacing */
+}
+
+/* Heading */
+.container h1 {
+    color: var(--dark);
+    /* Dark root color */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Paragraph under heading */
+.container>p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--dark);
+    /* changed to dark */
+    margin-bottom: 40px;
+}
+
+/* Contact columns */
+.container .col-md-4 {
+    display: flex;
+    align-items: flex-start;
+    /* important */
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Icons */
+.container .col-md-4 img {
+    width: 45px;
+}
+
+/* Contact text */
+.container .col-md-4 p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .container {
+        padding: 40px 15px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .container .col-md-4 {
+        margin-bottom: 25px;
+    }
+}
+
+/* Send us a message section */
+.message {
+    /* margin: 40px 0; */
+    padding: 40px 20px;
+    background-color: var(--hero);
+}
+
+/* Proper gap between columns */
+.message .row {
+    row-gap: 30px;
+    /* vertical gap */
+    column-gap: 60px;
+    /* horizontal gap */
+}
+
+/* Labels */
+#label {
+    color: var(--dark);
+    /* margin-bottom: 6px; */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Inputs */
+.input {
+    width: 100%;
+    height: 45px;
+    /* increased height */
+    background: transparent;
+    /* transparent */
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--dark);
+}
+
+.input:focus,
+#message:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--dark);
+    /* keep same border color */
+}
+
+/* Textarea column full height */
+.message .col-sm-5 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Textarea */
+#message {
+    flex: 1;
+    /* take full remaining space */
+    min-height: 200px;
+    background: transparent;
+    /* transparent */
+    border: 2px solid var(--dark);
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+#message:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--dark);
+}
+
+/* Button */
+.btn-send {
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    background: var(--dark);
+    padding: 10px 10px;
+    border: none;
+    width: 100px;
+}
+
+.btn-send:hover {
+    background-color: var(--hero);
+    border: 2px solid var(--dark);
+    color: var(--dark);
+}

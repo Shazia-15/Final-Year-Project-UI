@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Hall Card Details</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="MHCdetails.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ══════════ NAVBAR ══════════ -->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+
+            <a class="navbar-brand text-light fw-bold" href="">VenueVista</a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" title="#" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Content -->
+            <div class="collapse navbar-collapse" id="Navbar">
+
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="Home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Venues.html">Venues</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <button class="btn btn-call rounded-pill" onclick="openPopup()">Call Now</button>
+
+                    <!-- Overlay -->
+                    <div class="overlay" id="overlay">
+
+                        <div class="call-popup">
+                            <div class="header">
+                                <span>Call for Consultation</span>
+                                <i class="fa-solid fa-xmark close" onclick="closePopup()"></i>
+                            </div>
+
+                            <div class="number-box">
+                                <!-- Call icon -->
+                                <a href="tel:+923001234567" title="Call">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+
+                                <!-- Number -->
+                                <span id="phone">+92 300 1234567</span>
+
+                                <!-- Copy icon -->
+                                <i class="copyicon fa-regular fa-copy" onclick="copyNumber()" title="Copy"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a href="LYB.html" class="btn btn-main rounded-pill">List your business</a>
+                    <div class="menu-wrapper">
+                        <button class="menu-btn" aria-label="User Menu">
+                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-regular fa-circle-user"></i>
+                        </button>
+
+                        <div class="menu-dropdown">
+
+                            <!-- Help -->
+                            <a href="ContactUs.html">Help
+                            </a>
+
+                            <!-- Sign In (icon only) -->
+                            <a href="sign-in.html">Sign In
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+
+                            <!-- Sign Up (icon only) -->
+                            <a href="sign-up.html">Sign Up
+                                <i class="fa-solid fa-user-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ══════════ BREADCRUMB ══════════ -->
+    <div class="breadcrumb-bar px-4 py-2 d-flex align-items-center gap-2 flex-wrap">
+        <a href="index.html"><i class="fa fa-home me-1"></i>Home</a>
+        <i class="fa fa-chevron-right crumb-sep"></i>
+        <a href="venues.html">Venues</a>
+        <i class="fa fa-chevron-right crumb-sep"></i>
+        <a href="MHcards.html">Marriage Hall Venues</a>
+        <i class="fa fa-chevron-right crumb-sep"></i>
+        <span class="crumb-active">${v.name}</span>
+    </div>
+
+    <!-- ══════════ Hero Section ══════════ -->
+
+    <div class="container my-4">
+        <div class="row">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-6">
+                <h1>Shershah Palace</h1>
+                <p>⭐ 4.9 (45) | Lahore</p>
+
+                <hr>
+
+                <h5>Details</h5>
+                <p>Venue Type: Banquet Hall</p>
+                <p>Parking: 500</p>
+                <p>Catering: Internal</p>
+
+                <hr>
+
+                <h5>Description</h5>
+                <p>
+                    Perfect for weddings and large events. Indoor & outdoor options available.
+                </p>
+
+                <hr>
+
+                <h5>Additional Info</h5>
+                <ul>
+                    <li>No outside vendors</li>
+                    <li>No fireworks allowed</li>
+                    <li>Minimum guests apply</li>
+                </ul>
+
+                <button class="btn btn-danger">Book Now</button>
+                <button class="btn btn-outline-secondary">Message</button>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-6">
+
+                <!-- IMAGE GALLERY -->
+                <div class="gallery">
+                    <img src="img1.jpg" class="main-img" id="mainImage">
+
+                    <div class="thumbs">
+                        <img src="img1.jpg" onclick="changeImage(this)">
+                        <img src="img2.jpg" onclick="changeImage(this)">
+                        <img src="img3.jpg" onclick="changeImage(this)">
+                        <img src="img4.jpg" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- CALENDAR -->
+                <div class="calendar mt-4 p-3">
+                    <h6>Select Date</h6>
+                    <input type="date" class="form-control">
+                    <button class="btn btn-danger w-100 mt-2">Check Availability</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <div class="accordion" id="faqAccordion">
+
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+                                How can I book the venue?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can contact us via phone or website.<br>
+                                Our team will guide you through booking process.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item mt-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+                                What events do you host?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We host weddings, parties and corporate events.<br>
+                                Custom arrangements are also available.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item mt-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+                                What facilities are available?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We provide catering, parking and decoration services.<br>
+                                Audio and lighting setup is also included.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item mt-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+                                Can it handle large events?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we can manage large gatherings easily.<br>
+                                Spacious halls and outdoor areas are available.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Navbar call now button's javscript
+
+        function openPopup() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        function copyNumber() {
+            const number = document.getElementById("phone").innerText;
+            navigator.clipboard.writeText(number);
+        }
+
+        // image gallery box's working
+
+        function changeImage(img) {
+            document.getElementById("mainImage").src = img.src;
+        }
+    </script>
+</body>
+
+</html>

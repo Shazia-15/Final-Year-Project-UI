@@ -1,0 +1,75 @@
+/* Color Palette */
+:root {
+    --dark: #3E362E;
+    --primary: #865D36;
+    --hero: #93785B;
+    --card: #AC8968;
+    --light: #A69080;
+}
+
+.hero {
+    height: 60vh;
+    background: url('https://strettonmanorbarn.co.uk/wp-content/uploads/1697650059250.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Venues Section */
+
+.venues{
+    flex: 1;
+}
+
+/* Card Design */
+.venue-card {
+    background-color: rgba(183, 176, 176, 0.155);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #eee;
+
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venue-card h4 {
+    color: var(--dark);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Hover Effect */
+.venue-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--primary);
+}
+
+.venue-card:hover h4{
+    color: white;
+}
+
+.copyright {
+    background-color: var(--dark);
+    height: 60px;
+    color: white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .venue-card{
+        height: 80px;
+        padding: 20px;
+    }
+    .venue-card h4{
+        font-size: 1rem;
+    }
+}
